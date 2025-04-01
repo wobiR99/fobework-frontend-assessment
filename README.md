@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# Frontend for Fobework Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend implementation for the Fobework assessment project. The frontend is built using React and integrates with a backend API that serves dummy data.
 
-Currently, two official plugins are available:
+## Technologies Used
+- React
+- TypeScript
+- Axios
+- Tailwind CSS v4
+- React redux
+- React router
+- Shadcn
+- Lucide react icons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- User authentication (handled with a simple boolean state for demonstration)
+- Fetching and displaying financial data
+- UI components for savings, investments, and available funds
 
-## Expanding the ESLint configuration
+## Backend API
+The backend API was built separately to serve dummy data. It provides the following fields for a user object:
+- `name`
+- `totalSavings`
+- `totalInvestments`
+- `availableFunds`
+- `investmentPlans`
+- `emergencyFunds`
+- `savingsPlans`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Running the Project
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/wobiR99/fobework-frontend-assessment.git
+   ```
+2. Navigate into the project directory:
+   ```sh
+   cd FOBEWORK-FRONTEND-ASSESSMENT
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## API Integration
+Ensure the backend API is running and update the frontend to use the correct API URL.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
+The frontend can be deployed using platforms like Vercel .
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Author
+Obi Ifeanyi
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## License
+MIT License
+
